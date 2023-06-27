@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo</title>
+  <title>Lista de Tareas (Vanilla JS)</title>
 </head>
 <body>
-    
+  <input id="taskInput" type="text" placeholder="Ingrese una tarea">
+  <button id="addTaskBtn">Agregar tarea</button>
+  <ul id="taskList"></ul>
+
+  <script>
+    document.getElementById('addTaskBtn').addEventListener('click', function() {
+      var taskInput = document.getElementById('taskInput');
+      var taskList = document.getElementById('taskList');
+
+      if (taskInput.value !== '') {
+        var taskItem = document.createElement('li');
+        taskItem.textContent = taskInput.value;
+        taskList.appendChild(taskItem);
+        taskInput.value = '';
+      }
+    });
+  </script>
 </body>
 </html>
