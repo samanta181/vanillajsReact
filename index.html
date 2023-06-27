@@ -4,14 +4,15 @@
   <title>Lista de Tareas (Vanilla JS)</title>
 </head>
 <body>
+  <h1>LISTA DE TAREAS</h1>
   <input id="taskInput" type="text" placeholder="Ingrese una tarea">
   <button id="addTaskBtn">Agregar tarea</button>
-  <ul id="taskList"></ul>
+  <ul id="List"></ul>
 
   <script>
     document.getElementById('addTaskBtn').addEventListener('click', function() {
       var taskInput = document.getElementById('taskInput');
-      var taskList = document.getElementById('taskList');
+      var taskList = document.getElementById('List');
 
       if (taskInput.value !== '') {
         var taskItem = document.createElement('li');
